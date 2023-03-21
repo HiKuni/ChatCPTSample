@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ChatGPTSample"
+             x:Class="ChatGPTSample.MainPage">
+
+    <StackLayout VerticalOptions="FillAndExpand" Padding="10">
+        <Label Text="Chat with GPT" FontSize="Title" HorizontalOptions="Center" Margin="0,10,0,20"/>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <Editor x:Name="userInputEntry" Placeholder="ここに質問を入力してください" HeightRequest="150"/>
+        </ScrollView>
+        <Button Text="送信" Clicked="OnSendRequestClicked" Margin="0,10,0,20"/>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <Editor x:Name="outputText" Text="{Binding Answer}" FontSize="Body" TextColor="Black" VerticalOptions="StartAndExpand" HeightRequest="300" IsTextPredictionEnabled="False"/>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
